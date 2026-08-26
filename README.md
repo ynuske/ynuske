@@ -2,7 +2,9 @@
   <img src="https://readme-typing-svg.demolab.com?font=VT323&size=24&duration=2500&pause=1000&color=33FF33&center=false&vCenter=false&width=435&lines=%3E_Bem+vindo+ao+meu+perfil;%3E_System.ready()...;%3E_Acessando+dados..." alt="Typing SVG" />
 </a>
 
-
+<p align="center">
+  <img src="./assets/terminal.svg" width="760">
+</p>
 
 
 
