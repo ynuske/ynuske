@@ -3,150 +3,9 @@
 
   <defs>
 
+    <!-- Green CRT glow -->
     <filter id="glow">
-      <feGaussianBlur stdDeviation="1.8" result="blur"/>
-      <feMerge>
-        <feMergeNode in="blur"/>
-        <feMergeNode in="SourceGraphic"/>
-      </feMerge>
-    </filter>
-
-    <pattern id="scanlines"
-             width="4"
-             height="4"
-             patternUnits="userSpaceOnUse">
-      <rect width="4"
-            height="2"
-            fill="#33FF33"
-            opacity="0.035"/>
-    </pattern>
-
-  </defs>
-
-  <!-- Background -->
-  <rect width="760" height="190" fill="#030603"/>
-
-  <!-- Scanlines -->
-  <rect width="760" height="190" fill="url(#scanlines)"/>
-
-
-  <!-- Header -->
-
-  <text
-    x="20"
-    y="27"
-    fill="#33FF33"
-    font-family="monospace"
-    font-size="14"
-    filter="url(#glow)"
-  >
-    eric@github:~$
-  </text>
-
-  <text
-    x="640"
-    y="27"
-    fill="#33FF33"
-    font-family="monospace"
-    font-size="14"
-    filter="url(#glow)"
-  >
-    [ONLINE]
-  </text>
-
-
-  <line
-    x1="20"
-    y1="38"
-    x2="740"
-    y2="38"
-    stroke="#33FF33"
-    stroke-opacity="0.3"
-  />
-
-
-  <!-- Line 1 -->
-
-  <text
-    x="20"
-    y="70"
-    fill="#33FF33"
-    font-family="monospace"
-    font-size="20"
-    filter="url(#glow)"
-  >
-    &gt;_ Welcome to my profile!
-  </text>
-
-
-  <!-- Line 2 -->
-
-  <text
-    x="20"
-    y="105"
-    fill="#33FF33"
-    font-family="monospace"
-    font-size="20"
-    filter="url(#glow)"
-  >
-    &gt;_ My name is Eric.
-  </text>
-
-
-  <!-- Line 3 -->
-
-  <text
-    x="20"
-    y="140"
-    fill="#33FF33"
-    font-family="monospace"
-    font-size="20"
-    filter="url(#glow)"
-  >
-    &gt;_ Software engineering student.
-  </text>
-
-
-  <!-- Cursor -->
-
-  <rect
-    x="20"
-    y="150"
-    width="11"
-    height="21"
-    fill="#33FF33"
-    filter="url(#glow)"
-  >
-    <animate
-      attributeName="opacity"
-      values="1;0;1"
-      dur="0.8s"
-      repeatCount="indefinite"
-    />
-  </rect>
-
-
-  <!-- Border -->
-
-  <rect
-    x="2"
-    y="2"
-    width="756"
-    height="186"
-    rx="8"
-    fill="none"
-    stroke="#33FF33"
-    stroke-opacity="0.2"
-  />
-
-</svg><svg width="760" height="250" viewBox="0 0 760 250"
-     xmlns="http://www.w3.org/2000/svg">
-
-  <defs>
-
-    <!-- CRT glow -->
-    <filter id="glow">
-      <feGaussianBlur stdDeviation="1.5" result="blur"/>
+      <feGaussianBlur stdDeviation="2" result="blur"/>
       <feMerge>
         <feMergeNode in="blur"/>
         <feMergeNode in="SourceGraphic"/>
@@ -159,304 +18,16 @@
              height="4"
              patternUnits="userSpaceOnUse">
 
-      <rect
-        width="4"
-        height="2"
-        fill="#33FF33"
-        opacity="0.035"
-      />
-
+      <rect width="4"
+            height="2"
+            fill="#33FF33"
+            opacity="0.035"/>
     </pattern>
 
-    <!-- Screen gradient -->
+    <!-- Screen vignette -->
     <radialGradient id="screen">
       <stop offset="0%" stop-color="#071007"/>
-      <stop offset="70%" stop-color="#020502"/>
-      <stop offset="100%" stop-color="#000000"/>
-    </radialGradient>
-
-
-    <!-- ======================== -->
-    <!-- CLIPPING AREAS            -->
-    <!-- ======================== -->
-
-    <clipPath id="line1Clip">
-      <rect x="20" y="45" width="0" height="25">
-        <animate
-          attributeName="width"
-          values="0;300;300;0"
-          keyTimes="0;0.35;0.55;1"
-          dur="8s"
-          begin="0s"
-          repeatCount="indefinite"
-        />
-      </rect>
-    </clipPath>
-
-
-    <clipPath id="line2Clip">
-      <rect x="20" y="82" width="0" height="25">
-
-        <animate
-          attributeName="width"
-          values="0;210;210;0"
-          keyTimes="0;0.35;0.55;1"
-          dur="8s"
-          begin="2s"
-          repeatCount="indefinite"
-        />
-
-      </rect>
-    </clipPath>
-
-
-    <clipPath id="line3Clip">
-      <rect x="20" y="119" width="0" height="25">
-
-        <animate
-          attributeName="width"
-          values="0;390;390;0"
-          keyTimes="0;0.35;0.55;1"
-          dur="8s"
-          begin="4s"
-          repeatCount="indefinite"
-        />
-
-      </rect>
-    </clipPath>
-
-
-    <clipPath id="line4Clip">
-      <rect x="20" y="156" width="0" height="25">
-
-        <animate
-          attributeName="width"
-          values="0;560;560;0"
-          keyTimes="0;0.35;0.55;1"
-          dur="8s"
-          begin="6s"
-          repeatCount="indefinite"
-        />
-
-      </rect>
-    </clipPath>
-
-  </defs>
-
-
-  <!-- ======================== -->
-  <!-- BACKGROUND                -->
-  <!-- ======================== -->
-
-  <rect
-    width="760"
-    height="250"
-    rx="10"
-    fill="url(#screen)"
-  />
-
-  <!-- Scanlines -->
-
-  <rect
-    width="760"
-    height="250"
-    fill="url(#scanlines)"
-  />
-
-
-  <!-- ======================== -->
-  <!-- HEADER                    -->
-  <!-- ======================== -->
-
-  <g
-    fill="#33FF33"
-    font-family="monospace"
-    font-size="14"
-    filter="url(#glow)"
-  >
-
-    <text x="20" y="25">
-      eric@github:~$ ./profile.sh
-    </text>
-
-    <text x="650" y="25">
-      [ONLINE]
-    </text>
-
-  </g>
-
-
-  <!-- Header separator -->
-
-  <line
-    x1="20"
-    y1="35"
-    x2="740"
-    y2="35"
-    stroke="#33FF33"
-    stroke-opacity="0.3"
-  />
-
-
-  <!-- ======================== -->
-  <!-- LINE 1                    -->
-  <!-- ======================== -->
-
-  <g
-    clip-path="url(#line1Clip)"
-    fill="#33FF33"
-    font-family="monospace"
-    font-size="19"
-    filter="url(#glow)"
-  >
-
-    <text x="20" y="65">
-      &gt;_ Welcome to my profile!
-    </text>
-
-  </g>
-
-
-  <!-- ======================== -->
-  <!-- LINE 2                    -->
-  <!-- ======================== -->
-
-  <g
-    clip-path="url(#line2Clip)"
-    fill="#33FF33"
-    font-family="monospace"
-    font-size="19"
-    filter="url(#glow)"
-  >
-
-    <text x="20" y="102">
-      &gt;_ My name is Eric.
-    </text>
-
-  </g>
-
-
-  <!-- ======================== -->
-  <!-- LINE 3                    -->
-  <!-- ======================== -->
-
-  <g
-    clip-path="url(#line3Clip)"
-    fill="#33FF33"
-    font-family="monospace"
-    font-size="19"
-    filter="url(#glow)"
-  >
-
-    <text x="20" y="139">
-      &gt;_ I am a software engineering student.
-    </text>
-
-  </g>
-
-
-  <!-- ======================== -->
-  <!-- LINE 4                    -->
-  <!-- ======================== -->
-
-  <g
-    clip-path="url(#line4Clip)"
-    fill="#33FF33"
-    font-family="monospace"
-    font-size="19"
-    filter="url(#glow)"
-  >
-
-    <text x="20" y="176">
-      &gt;_ I like programming and customizing Linux.
-    </text>
-
-  </g>
-
-
-  <!-- ======================== -->
-  <!-- FINAL PROMPT              -->
-  <!-- ======================== -->
-
-  <g
-    fill="#33FF33"
-    font-family="monospace"
-    font-size="18"
-    filter="url(#glow)"
-  >
-
-    <text x="20" y="215">
-      eric@github:~$
-    </text>
-
-    <rect
-      x="160"
-      y="198"
-      width="10"
-      height="20"
-    >
-
-      <animate
-        attributeName="opacity"
-        values="1;0;1"
-        dur="0.8s"
-        repeatCount="indefinite"
-      />
-
-    </rect>
-
-  </g>
-
-
-  <!-- ======================== -->
-  <!-- CRT BORDER                -->
-  <!-- ======================== -->
-
-  <rect
-    x="2"
-    y="2"
-    width="756"
-    height="246"
-    rx="10"
-    fill="none"
-    stroke="#33FF33"
-    stroke-opacity="0.25"
-  />
-
-</svg><svg width="760" height="230" viewBox="0 0 760 230"
-     xmlns="http://www.w3.org/2000/svg">
-
-  <defs>
-
-    <!-- CRT glow -->
-    <filter id="glow">
-      <feGaussianBlur stdDeviation="1.8" result="blur"/>
-      <feMerge>
-        <feMergeNode in="blur"/>
-        <feMergeNode in="SourceGraphic"/>
-      </feMerge>
-    </filter>
-
-    <!-- Scanlines -->
-    <pattern
-      id="scanlines"
-      width="4"
-      height="4"
-      patternUnits="userSpaceOnUse">
-
-      <rect
-        width="4"
-        height="2"
-        fill="#33FF33"
-        opacity="0.035"
-      />
-
-    </pattern>
-
-    <!-- CRT screen -->
-    <radialGradient id="screen">
-      <stop offset="0%" stop-color="#081208"/>
-      <stop offset="70%" stop-color="#030603"/>
+      <stop offset="75%" stop-color="#020502"/>
       <stop offset="100%" stop-color="#000000"/>
     </radialGradient>
 
@@ -464,26 +35,26 @@
 
 
   <!-- ========================= -->
-  <!-- SCREEN                     -->
+  <!-- CRT SCREEN                 -->
   <!-- ========================= -->
 
   <rect
     width="760"
-    height="230"
-    rx="9"
+    height="190"
+    rx="8"
     fill="url(#screen)"
   />
 
   <!-- Scanlines -->
   <rect
     width="760"
-    height="230"
+    height="190"
     fill="url(#scanlines)"
   />
 
 
   <!-- ========================= -->
-  <!-- HEADER                     -->
+  <!-- TERMINAL HEADER            -->
   <!-- ========================= -->
 
   <g
@@ -493,128 +64,66 @@
     filter="url(#glow)"
   >
 
-    <text x="22" y="24">
-      ERIC@GITHUB:~$ ./profile.sh
+    <text x="22" y="25">
+      ERIC@GITHUB:~$
     </text>
 
-    <text x="650" y="24">
+    <text x="600" y="25">
       [ONLINE]
     </text>
 
   </g>
 
 
+  <!-- Separator -->
   <line
     x1="20"
     y1="34"
     x2="740"
     y2="34"
     stroke="#33FF33"
-    stroke-opacity="0.3"
+    stroke-opacity="0.35"
   />
 
 
   <!-- ========================= -->
-  <!-- BOOT SEQUENCE              -->
+  <!-- TERMINAL TEXT              -->
   <!-- ========================= -->
 
   <g
     fill="#33FF33"
     font-family="monospace"
-    font-size="15"
+    font-size="19"
     filter="url(#glow)"
   >
 
-    <text x="22" y="58">
-      INITIALIZING SYSTEM...
-    </text>
-
-    <text x="22" y="80">
-      LOADING USER PROFILE...
-    </text>
-
-    <text x="22" y="102">
-      ACCESS GRANTED.
-    </text>
-
-  </g>
-
-
-  <!-- Progress bar -->
-
-  <g stroke="#33FF33" filter="url(#glow)">
-
-    <rect
-      x="22"
-      y="112"
-      width="400"
-      height="12"
-      fill="none"
-      stroke-opacity="0.7"
-    />
-
-    <rect
-      x="24"
-      y="114"
-      width="396"
-      height="8"
-      fill="#33FF33"
-      stroke="none"
-    />
-
-  </g>
-
-
-  <text
-    x="435"
-    y="123"
-    fill="#33FF33"
-    font-family="monospace"
-    font-size="13"
-    filter="url(#glow)"
-  >
-    100%
-  </text>
-
-
-  <!-- ========================= -->
-  <!-- PROFILE                    -->
-  <!-- ========================= -->
-
-  <g
-    fill="#33FF33"
-    font-family="monospace"
-    font-size="17"
-    filter="url(#glow)"
-  >
-
-    <text x="22" y="151">
+    <text x="22" y="67">
       &gt;_ Welcome to my profile!
     </text>
 
-    <text x="22" y="174">
+    <text x="22" y="97">
       &gt;_ My name is Eric.
     </text>
 
-    <text x="22" y="197">
-      &gt;_ Software engineering student.
+    <text x="22" y="127">
+      &gt;_ I am a software engineering student.
     </text>
 
-    <text x="22" y="220">
-      &gt;_ Linux enthusiast &amp; programmer.
+    <text x="22" y="157">
+      &gt;_ I like programming and customizing my Linux environment.
     </text>
 
   </g>
 
 
   <!-- ========================= -->
-  <!-- CURSOR                     -->
+  <!-- BLINKING CURSOR            -->
   <!-- ========================= -->
 
   <rect
-    x="278"
-    y="207"
-    width="10"
+    x="22"
+    y="166"
+    width="11"
     height="18"
     fill="#33FF33"
     filter="url(#glow)"
@@ -623,7 +132,7 @@
     <animate
       attributeName="opacity"
       values="1;0;1"
-      dur="0.8s"
+      dur="0.9s"
       repeatCount="indefinite"
     />
 
@@ -638,11 +147,11 @@
     x="2"
     y="2"
     width="756"
-    height="226"
-    rx="9"
+    height="186"
+    rx="8"
     fill="none"
     stroke="#33FF33"
-    stroke-opacity="0.18"
+    stroke-opacity="0.2"
   />
 
 </svg>
