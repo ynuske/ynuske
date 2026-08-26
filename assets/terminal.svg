@@ -1,61 +1,184 @@
-<svg width="760" height="190" viewBox="0 0 760 190"
+<svg width="760" height="250" viewBox="0 0 760 250"
      xmlns="http://www.w3.org/2000/svg">
 
   <defs>
 
-    <!-- Green CRT glow -->
+    <!-- ======================== -->
+    <!-- CRT GLOW                  -->
+    <!-- ======================== -->
+
     <filter id="glow">
-      <feGaussianBlur stdDeviation="2" result="blur"/>
+      <feGaussianBlur stdDeviation="1.5" result="blur"/>
       <feMerge>
         <feMergeNode in="blur"/>
         <feMergeNode in="SourceGraphic"/>
       </feMerge>
     </filter>
 
-    <!-- CRT scanlines -->
-    <pattern id="scanlines"
-             width="4"
-             height="4"
-             patternUnits="userSpaceOnUse">
 
-      <rect width="4"
-            height="2"
-            fill="#33FF33"
-            opacity="0.035"/>
+    <!-- ======================== -->
+    <!-- CRT SCANLINES             -->
+    <!-- ======================== -->
+
+    <pattern
+      id="scanlines"
+      width="4"
+      height="4"
+      patternUnits="userSpaceOnUse">
+
+      <rect
+        width="4"
+        height="2"
+        fill="#33FF33"
+        opacity="0.035"
+      />
+
     </pattern>
 
-    <!-- Screen vignette -->
+
+    <!-- ======================== -->
+    <!-- SCREEN GRADIENT            -->
+    <!-- ======================== -->
+
     <radialGradient id="screen">
       <stop offset="0%" stop-color="#071007"/>
-      <stop offset="75%" stop-color="#020502"/>
+      <stop offset="70%" stop-color="#020502"/>
       <stop offset="100%" stop-color="#000000"/>
     </radialGradient>
+
+
+    <!-- ======================== -->
+    <!-- LINE 1 MASK               -->
+    <!-- ======================== -->
+
+    <clipPath id="line1Clip">
+
+      <rect
+        x="20"
+        y="45"
+        width="0"
+        height="25">
+
+        <animate
+          attributeName="width"
+          from="0"
+          to="300"
+          dur="1.8s"
+          begin="0.8s"
+          fill="freeze"
+        />
+
+      </rect>
+
+    </clipPath>
+
+
+    <!-- ======================== -->
+    <!-- LINE 2 MASK               -->
+    <!-- ======================== -->
+
+    <clipPath id="line2Clip">
+
+      <rect
+        x="20"
+        y="82"
+        width="0"
+        height="25">
+
+        <animate
+          attributeName="width"
+          from="0"
+          to="220"
+          dur="1.3s"
+          begin="3.0s"
+          fill="freeze"
+        />
+
+      </rect>
+
+    </clipPath>
+
+
+    <!-- ======================== -->
+    <!-- LINE 3 MASK               -->
+    <!-- ======================== -->
+
+    <clipPath id="line3Clip">
+
+      <rect
+        x="20"
+        y="119"
+        width="0"
+        height="25">
+
+        <animate
+          attributeName="width"
+          from="0"
+          to="390"
+          dur="2.2s"
+          begin="4.8s"
+          fill="freeze"
+        />
+
+      </rect>
+
+    </clipPath>
+
+
+    <!-- ======================== -->
+    <!-- LINE 4 MASK               -->
+    <!-- ======================== -->
+
+    <clipPath id="line4Clip">
+
+      <rect
+        x="20"
+        y="156"
+        width="0"
+        height="25">
+
+        <animate
+          attributeName="width"
+          from="0"
+          to="560"
+          dur="2.8s"
+          begin="7.4s"
+          fill="freeze"
+        />
+
+      </rect>
+
+    </clipPath>
 
   </defs>
 
 
-  <!-- ========================= -->
-  <!-- CRT SCREEN                 -->
-  <!-- ========================= -->
+  <!-- ======================== -->
+  <!-- SCREEN                    -->
+  <!-- ======================== -->
 
   <rect
     width="760"
-    height="190"
-    rx="8"
+    height="250"
+    rx="10"
     fill="url(#screen)"
   />
 
-  <!-- Scanlines -->
+
+  <!-- ======================== -->
+  <!-- SCANLINES                 -->
+  <!-- ======================== -->
+
   <rect
     width="760"
-    height="190"
+    height="250"
     fill="url(#scanlines)"
   />
 
 
-  <!-- ========================= -->
-  <!-- TERMINAL HEADER            -->
-  <!-- ========================= -->
+  <!-- ======================== -->
+  <!-- HEADER                    -->
+  <!-- ======================== -->
 
   <g
     fill="#33FF33"
@@ -64,94 +187,158 @@
     filter="url(#glow)"
   >
 
-    <text x="22" y="25">
-      ERIC@GITHUB:~$
+    <text x="20" y="25">
+      eric@github:~$ ./profile.sh
     </text>
 
-    <text x="600" y="25">
+    <text x="650" y="25">
       [ONLINE]
     </text>
 
   </g>
 
 
-  <!-- Separator -->
+  <!-- Header separator -->
+
   <line
     x1="20"
-    y1="34"
+    y1="35"
     x2="740"
-    y2="34"
+    y2="35"
     stroke="#33FF33"
-    stroke-opacity="0.35"
+    stroke-opacity="0.3"
   />
 
 
-  <!-- ========================= -->
-  <!-- TERMINAL TEXT              -->
-  <!-- ========================= -->
+  <!-- ======================== -->
+  <!-- LINE 1                    -->
+  <!-- ======================== -->
 
   <g
+    clip-path="url(#line1Clip)"
     fill="#33FF33"
     font-family="monospace"
     font-size="19"
     filter="url(#glow)"
   >
 
-    <text x="22" y="67">
+    <text x="20" y="65">
       &gt;_ Welcome to my profile!
-    </text>
-
-    <text x="22" y="97">
-      &gt;_ My name is Eric.
-    </text>
-
-    <text x="22" y="127">
-      &gt;_ I am a software engineering student.
-    </text>
-
-    <text x="22" y="157">
-      &gt;_ I like programming and customizing my Linux environment.
     </text>
 
   </g>
 
 
-  <!-- ========================= -->
-  <!-- BLINKING CURSOR            -->
-  <!-- ========================= -->
+  <!-- ======================== -->
+  <!-- LINE 2                    -->
+  <!-- ======================== -->
 
-  <rect
-    x="22"
-    y="166"
-    width="11"
-    height="18"
+  <g
+    clip-path="url(#line2Clip)"
     fill="#33FF33"
+    font-family="monospace"
+    font-size="19"
     filter="url(#glow)"
   >
 
-    <animate
-      attributeName="opacity"
-      values="1;0;1"
-      dur="0.9s"
-      repeatCount="indefinite"
-    />
+    <text x="20" y="102">
+      &gt;_ My name is Eric.
+    </text>
 
-  </rect>
+  </g>
 
 
-  <!-- ========================= -->
-  <!-- CRT BORDER                 -->
-  <!-- ========================= -->
+  <!-- ======================== -->
+  <!-- LINE 3                    -->
+  <!-- ======================== -->
+
+  <g
+    clip-path="url(#line3Clip)"
+    fill="#33FF33"
+    font-family="monospace"
+    font-size="19"
+    filter="url(#glow)"
+  >
+
+    <text x="20" y="139">
+      &gt;_ I am a software engineering student.
+    </text>
+
+  </g>
+
+
+  <!-- ======================== -->
+  <!-- LINE 4                    -->
+  <!-- ======================== -->
+
+  <g
+    clip-path="url(#line4Clip)"
+    fill="#33FF33"
+    font-family="monospace"
+    font-size="19"
+    filter="url(#glow)"
+  >
+
+    <text x="20" y="176">
+      &gt;_ I like programming and customizing Linux.
+    </text>
+
+  </g>
+
+
+  <!-- ======================== -->
+  <!-- FINAL PROMPT              -->
+  <!-- ======================== -->
+
+  <g
+    fill="#33FF33"
+    font-family="monospace"
+    font-size="18"
+    filter="url(#glow)"
+  >
+
+    <text x="20" y="215">
+      eric@github:~$
+    </text>
+
+
+    <!-- ======================== -->
+    <!-- BLINKING CURSOR           -->
+    <!-- ======================== -->
+
+    <rect
+      x="160"
+      y="198"
+      width="10"
+      height="20"
+      fill="#33FF33">
+
+      <animate
+        attributeName="opacity"
+        values="1;0;1"
+        dur="0.8s"
+        repeatCount="indefinite"
+        begin="10.5s"
+      />
+
+    </rect>
+
+  </g>
+
+
+  <!-- ======================== -->
+  <!-- CRT BORDER                -->
+  <!-- ======================== -->
 
   <rect
     x="2"
     y="2"
     width="756"
-    height="186"
-    rx="8"
+    height="246"
+    rx="10"
     fill="none"
     stroke="#33FF33"
-    stroke-opacity="0.2"
+    stroke-opacity="0.25"
   />
 
 </svg>
