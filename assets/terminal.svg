@@ -1,4 +1,288 @@
-<svg width="760" height="230" viewBox="0 0 760 230"
+<svg width="760" height="250" viewBox="0 0 760 250"
+     xmlns="http://www.w3.org/2000/svg">
+
+  <defs>
+
+    <!-- CRT glow -->
+    <filter id="glow">
+      <feGaussianBlur stdDeviation="1.5" result="blur"/>
+      <feMerge>
+        <feMergeNode in="blur"/>
+        <feMergeNode in="SourceGraphic"/>
+      </feMerge>
+    </filter>
+
+    <!-- CRT scanlines -->
+    <pattern id="scanlines"
+             width="4"
+             height="4"
+             patternUnits="userSpaceOnUse">
+
+      <rect
+        width="4"
+        height="2"
+        fill="#33FF33"
+        opacity="0.035"
+      />
+
+    </pattern>
+
+    <!-- Screen gradient -->
+    <radialGradient id="screen">
+      <stop offset="0%" stop-color="#071007"/>
+      <stop offset="70%" stop-color="#020502"/>
+      <stop offset="100%" stop-color="#000000"/>
+    </radialGradient>
+
+
+    <!-- ======================== -->
+    <!-- CLIPPING AREAS            -->
+    <!-- ======================== -->
+
+    <clipPath id="line1Clip">
+      <rect x="20" y="45" width="0" height="25">
+        <animate
+          attributeName="width"
+          values="0;300;300;0"
+          keyTimes="0;0.35;0.55;1"
+          dur="8s"
+          begin="0s"
+          repeatCount="indefinite"
+        />
+      </rect>
+    </clipPath>
+
+
+    <clipPath id="line2Clip">
+      <rect x="20" y="82" width="0" height="25">
+
+        <animate
+          attributeName="width"
+          values="0;210;210;0"
+          keyTimes="0;0.35;0.55;1"
+          dur="8s"
+          begin="2s"
+          repeatCount="indefinite"
+        />
+
+      </rect>
+    </clipPath>
+
+
+    <clipPath id="line3Clip">
+      <rect x="20" y="119" width="0" height="25">
+
+        <animate
+          attributeName="width"
+          values="0;390;390;0"
+          keyTimes="0;0.35;0.55;1"
+          dur="8s"
+          begin="4s"
+          repeatCount="indefinite"
+        />
+
+      </rect>
+    </clipPath>
+
+
+    <clipPath id="line4Clip">
+      <rect x="20" y="156" width="0" height="25">
+
+        <animate
+          attributeName="width"
+          values="0;560;560;0"
+          keyTimes="0;0.35;0.55;1"
+          dur="8s"
+          begin="6s"
+          repeatCount="indefinite"
+        />
+
+      </rect>
+    </clipPath>
+
+  </defs>
+
+
+  <!-- ======================== -->
+  <!-- BACKGROUND                -->
+  <!-- ======================== -->
+
+  <rect
+    width="760"
+    height="250"
+    rx="10"
+    fill="url(#screen)"
+  />
+
+  <!-- Scanlines -->
+
+  <rect
+    width="760"
+    height="250"
+    fill="url(#scanlines)"
+  />
+
+
+  <!-- ======================== -->
+  <!-- HEADER                    -->
+  <!-- ======================== -->
+
+  <g
+    fill="#33FF33"
+    font-family="monospace"
+    font-size="14"
+    filter="url(#glow)"
+  >
+
+    <text x="20" y="25">
+      eric@github:~$ ./profile.sh
+    </text>
+
+    <text x="650" y="25">
+      [ONLINE]
+    </text>
+
+  </g>
+
+
+  <!-- Header separator -->
+
+  <line
+    x1="20"
+    y1="35"
+    x2="740"
+    y2="35"
+    stroke="#33FF33"
+    stroke-opacity="0.3"
+  />
+
+
+  <!-- ======================== -->
+  <!-- LINE 1                    -->
+  <!-- ======================== -->
+
+  <g
+    clip-path="url(#line1Clip)"
+    fill="#33FF33"
+    font-family="monospace"
+    font-size="19"
+    filter="url(#glow)"
+  >
+
+    <text x="20" y="65">
+      &gt;_ Welcome to my profile!
+    </text>
+
+  </g>
+
+
+  <!-- ======================== -->
+  <!-- LINE 2                    -->
+  <!-- ======================== -->
+
+  <g
+    clip-path="url(#line2Clip)"
+    fill="#33FF33"
+    font-family="monospace"
+    font-size="19"
+    filter="url(#glow)"
+  >
+
+    <text x="20" y="102">
+      &gt;_ My name is Eric.
+    </text>
+
+  </g>
+
+
+  <!-- ======================== -->
+  <!-- LINE 3                    -->
+  <!-- ======================== -->
+
+  <g
+    clip-path="url(#line3Clip)"
+    fill="#33FF33"
+    font-family="monospace"
+    font-size="19"
+    filter="url(#glow)"
+  >
+
+    <text x="20" y="139">
+      &gt;_ I am a software engineering student.
+    </text>
+
+  </g>
+
+
+  <!-- ======================== -->
+  <!-- LINE 4                    -->
+  <!-- ======================== -->
+
+  <g
+    clip-path="url(#line4Clip)"
+    fill="#33FF33"
+    font-family="monospace"
+    font-size="19"
+    filter="url(#glow)"
+  >
+
+    <text x="20" y="176">
+      &gt;_ I like programming and customizing Linux.
+    </text>
+
+  </g>
+
+
+  <!-- ======================== -->
+  <!-- FINAL PROMPT              -->
+  <!-- ======================== -->
+
+  <g
+    fill="#33FF33"
+    font-family="monospace"
+    font-size="18"
+    filter="url(#glow)"
+  >
+
+    <text x="20" y="215">
+      eric@github:~$
+    </text>
+
+    <rect
+      x="160"
+      y="198"
+      width="10"
+      height="20"
+    >
+
+      <animate
+        attributeName="opacity"
+        values="1;0;1"
+        dur="0.8s"
+        repeatCount="indefinite"
+      />
+
+    </rect>
+
+  </g>
+
+
+  <!-- ======================== -->
+  <!-- CRT BORDER                -->
+  <!-- ======================== -->
+
+  <rect
+    x="2"
+    y="2"
+    width="756"
+    height="246"
+    rx="10"
+    fill="none"
+    stroke="#33FF33"
+    stroke-opacity="0.25"
+  />
+
+</svg><svg width="760" height="230" viewBox="0 0 760 230"
      xmlns="http://www.w3.org/2000/svg">
 
   <defs>
