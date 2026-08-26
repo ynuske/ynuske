@@ -17,7 +17,7 @@
 
 
     <!-- ======================== -->
-    <!-- CRT SCANLINES             -->
+    <!-- CRT SCANLINES              -->
     <!-- ======================== -->
 
     <pattern
@@ -48,7 +48,7 @@
 
 
     <!-- ======================== -->
-    <!-- LINE 1 MASK               -->
+    <!-- LINE 1 REVEAL             -->
     <!-- ======================== -->
 
     <clipPath id="line1Clip">
@@ -62,7 +62,7 @@
         <animate
           attributeName="width"
           from="0"
-          to="300"
+          to="700"
           dur="1.8s"
           begin="0.8s"
           fill="freeze"
@@ -74,7 +74,7 @@
 
 
     <!-- ======================== -->
-    <!-- LINE 2 MASK               -->
+    <!-- LINE 2 REVEAL             -->
     <!-- ======================== -->
 
     <clipPath id="line2Clip">
@@ -88,7 +88,7 @@
         <animate
           attributeName="width"
           from="0"
-          to="220"
+          to="700"
           dur="1.3s"
           begin="3.0s"
           fill="freeze"
@@ -100,7 +100,7 @@
 
 
     <!-- ======================== -->
-    <!-- LINE 3 MASK               -->
+    <!-- LINE 3 REVEAL             -->
     <!-- ======================== -->
 
     <clipPath id="line3Clip">
@@ -114,7 +114,7 @@
         <animate
           attributeName="width"
           from="0"
-          to="390"
+          to="700"
           dur="2.2s"
           begin="4.8s"
           fill="freeze"
@@ -126,7 +126,7 @@
 
 
     <!-- ======================== -->
-    <!-- LINE 4 MASK               -->
+    <!-- LINE 4 REVEAL             -->
     <!-- ======================== -->
 
     <clipPath id="line4Clip">
@@ -140,7 +140,7 @@
         <animate
           attributeName="width"
           from="0"
-          to="560"
+          to="700"
           dur="2.8s"
           begin="7.4s"
           fill="freeze"
@@ -198,7 +198,9 @@
   </g>
 
 
-  <!-- Header separator -->
+  <!-- ======================== -->
+  <!-- HEADER SEPARATOR          -->
+  <!-- ======================== -->
 
   <line
     x1="20"
@@ -317,8 +319,8 @@
         attributeName="opacity"
         values="1;0;1"
         dur="0.8s"
-        repeatCount="indefinite"
         begin="10.5s"
+        repeatCount="indefinite"
       />
 
     </rect>
