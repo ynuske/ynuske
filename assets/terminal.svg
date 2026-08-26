@@ -1,0 +1,223 @@
+<svg width="760" height="230" viewBox="0 0 760 230"
+     xmlns="http://www.w3.org/2000/svg">
+
+  <defs>
+
+    <!-- CRT glow -->
+    <filter id="glow">
+      <feGaussianBlur stdDeviation="1.8" result="blur"/>
+      <feMerge>
+        <feMergeNode in="blur"/>
+        <feMergeNode in="SourceGraphic"/>
+      </feMerge>
+    </filter>
+
+    <!-- Scanlines -->
+    <pattern
+      id="scanlines"
+      width="4"
+      height="4"
+      patternUnits="userSpaceOnUse">
+
+      <rect
+        width="4"
+        height="2"
+        fill="#33FF33"
+        opacity="0.035"
+      />
+
+    </pattern>
+
+    <!-- CRT screen -->
+    <radialGradient id="screen">
+      <stop offset="0%" stop-color="#081208"/>
+      <stop offset="70%" stop-color="#030603"/>
+      <stop offset="100%" stop-color="#000000"/>
+    </radialGradient>
+
+  </defs>
+
+
+  <!-- ========================= -->
+  <!-- SCREEN                     -->
+  <!-- ========================= -->
+
+  <rect
+    width="760"
+    height="230"
+    rx="9"
+    fill="url(#screen)"
+  />
+
+  <!-- Scanlines -->
+  <rect
+    width="760"
+    height="230"
+    fill="url(#scanlines)"
+  />
+
+
+  <!-- ========================= -->
+  <!-- HEADER                     -->
+  <!-- ========================= -->
+
+  <g
+    fill="#33FF33"
+    font-family="monospace"
+    font-size="14"
+    filter="url(#glow)"
+  >
+
+    <text x="22" y="24">
+      ERIC@GITHUB:~$ ./profile.sh
+    </text>
+
+    <text x="650" y="24">
+      [ONLINE]
+    </text>
+
+  </g>
+
+
+  <line
+    x1="20"
+    y1="34"
+    x2="740"
+    y2="34"
+    stroke="#33FF33"
+    stroke-opacity="0.3"
+  />
+
+
+  <!-- ========================= -->
+  <!-- BOOT SEQUENCE              -->
+  <!-- ========================= -->
+
+  <g
+    fill="#33FF33"
+    font-family="monospace"
+    font-size="15"
+    filter="url(#glow)"
+  >
+
+    <text x="22" y="58">
+      INITIALIZING SYSTEM...
+    </text>
+
+    <text x="22" y="80">
+      LOADING USER PROFILE...
+    </text>
+
+    <text x="22" y="102">
+      ACCESS GRANTED.
+    </text>
+
+  </g>
+
+
+  <!-- Progress bar -->
+
+  <g stroke="#33FF33" filter="url(#glow)">
+
+    <rect
+      x="22"
+      y="112"
+      width="400"
+      height="12"
+      fill="none"
+      stroke-opacity="0.7"
+    />
+
+    <rect
+      x="24"
+      y="114"
+      width="396"
+      height="8"
+      fill="#33FF33"
+      stroke="none"
+    />
+
+  </g>
+
+
+  <text
+    x="435"
+    y="123"
+    fill="#33FF33"
+    font-family="monospace"
+    font-size="13"
+    filter="url(#glow)"
+  >
+    100%
+  </text>
+
+
+  <!-- ========================= -->
+  <!-- PROFILE                    -->
+  <!-- ========================= -->
+
+  <g
+    fill="#33FF33"
+    font-family="monospace"
+    font-size="17"
+    filter="url(#glow)"
+  >
+
+    <text x="22" y="151">
+      &gt;_ Welcome to my profile!
+    </text>
+
+    <text x="22" y="174">
+      &gt;_ My name is Eric.
+    </text>
+
+    <text x="22" y="197">
+      &gt;_ Software engineering student.
+    </text>
+
+    <text x="22" y="220">
+      &gt;_ Linux enthusiast &amp; programmer.
+    </text>
+
+  </g>
+
+
+  <!-- ========================= -->
+  <!-- CURSOR                     -->
+  <!-- ========================= -->
+
+  <rect
+    x="278"
+    y="207"
+    width="10"
+    height="18"
+    fill="#33FF33"
+    filter="url(#glow)"
+  >
+
+    <animate
+      attributeName="opacity"
+      values="1;0;1"
+      dur="0.8s"
+      repeatCount="indefinite"
+    />
+
+  </rect>
+
+
+  <!-- ========================= -->
+  <!-- CRT BORDER                 -->
+  <!-- ========================= -->
+
+  <rect
+    x="2"
+    y="2"
+    width="756"
+    height="226"
+    rx="9"
+    fill="none"
+    stroke="#33FF33"
+    stroke-opacity="0.18"
+  />
+
+</svg>
