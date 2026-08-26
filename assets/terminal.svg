@@ -1,4 +1,145 @@
-<svg width="760" height="250" viewBox="0 0 760 250"
+<svg width="760" height="190" viewBox="0 0 760 190"
+     xmlns="http://www.w3.org/2000/svg">
+
+  <defs>
+
+    <filter id="glow">
+      <feGaussianBlur stdDeviation="1.8" result="blur"/>
+      <feMerge>
+        <feMergeNode in="blur"/>
+        <feMergeNode in="SourceGraphic"/>
+      </feMerge>
+    </filter>
+
+    <pattern id="scanlines"
+             width="4"
+             height="4"
+             patternUnits="userSpaceOnUse">
+      <rect width="4"
+            height="2"
+            fill="#33FF33"
+            opacity="0.035"/>
+    </pattern>
+
+  </defs>
+
+  <!-- Background -->
+  <rect width="760" height="190" fill="#030603"/>
+
+  <!-- Scanlines -->
+  <rect width="760" height="190" fill="url(#scanlines)"/>
+
+
+  <!-- Header -->
+
+  <text
+    x="20"
+    y="27"
+    fill="#33FF33"
+    font-family="monospace"
+    font-size="14"
+    filter="url(#glow)"
+  >
+    eric@github:~$
+  </text>
+
+  <text
+    x="640"
+    y="27"
+    fill="#33FF33"
+    font-family="monospace"
+    font-size="14"
+    filter="url(#glow)"
+  >
+    [ONLINE]
+  </text>
+
+
+  <line
+    x1="20"
+    y1="38"
+    x2="740"
+    y2="38"
+    stroke="#33FF33"
+    stroke-opacity="0.3"
+  />
+
+
+  <!-- Line 1 -->
+
+  <text
+    x="20"
+    y="70"
+    fill="#33FF33"
+    font-family="monospace"
+    font-size="20"
+    filter="url(#glow)"
+  >
+    &gt;_ Welcome to my profile!
+  </text>
+
+
+  <!-- Line 2 -->
+
+  <text
+    x="20"
+    y="105"
+    fill="#33FF33"
+    font-family="monospace"
+    font-size="20"
+    filter="url(#glow)"
+  >
+    &gt;_ My name is Eric.
+  </text>
+
+
+  <!-- Line 3 -->
+
+  <text
+    x="20"
+    y="140"
+    fill="#33FF33"
+    font-family="monospace"
+    font-size="20"
+    filter="url(#glow)"
+  >
+    &gt;_ Software engineering student.
+  </text>
+
+
+  <!-- Cursor -->
+
+  <rect
+    x="20"
+    y="150"
+    width="11"
+    height="21"
+    fill="#33FF33"
+    filter="url(#glow)"
+  >
+    <animate
+      attributeName="opacity"
+      values="1;0;1"
+      dur="0.8s"
+      repeatCount="indefinite"
+    />
+  </rect>
+
+
+  <!-- Border -->
+
+  <rect
+    x="2"
+    y="2"
+    width="756"
+    height="186"
+    rx="8"
+    fill="none"
+    stroke="#33FF33"
+    stroke-opacity="0.2"
+  />
+
+</svg><svg width="760" height="250" viewBox="0 0 760 250"
      xmlns="http://www.w3.org/2000/svg">
 
   <defs>
