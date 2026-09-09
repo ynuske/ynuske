@@ -1,5 +1,5 @@
 
-<p align="left">
+<p align="center">
   <img src="./assets/terminal.svg" width="760" alt="Retro terminal">
 </p>
 
